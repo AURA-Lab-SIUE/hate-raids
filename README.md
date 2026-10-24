@@ -9,7 +9,11 @@ This is the R code behind my paper, "Couldn’t Protect You: The Cost of (Hate) 
 
 
 ### Data Notes
-I have included the created CSV files; however, I have chosen to exclude the raw JSON data pulls used to create those files or that were read back into R. If you run the full code included you will duplicate this data set with whatever tweets remain posted and public.
+The CSV files in `data/` follow the X Developer Policy on content redistribution: they carry tweet IDs, conversation and quoted-tweet IDs, timestamps, language, public engagement counts, and derived scores only. No tweet text, usernames, user IDs, or profile fields are included. In `pre_release.csv` and `post_release.csv`, `analysed` marks the tweets the analysis scores (no game-title terms, conversation starters only), and `sent_value`, the ten NRC Word-Emotion Association Lexicon counts, and `emo_score` (positive minus negative) are the scores `full_script.R` computes for them. To rerun the text steps, retrieve ("hydrate") the tweets from the X API with your own credentials; tweets deleted or made private since collection will not be returned.
+
+## License
+
+The code is released under the MIT License (see `LICENSE`). Use of the tweet IDs to retrieve content from X is governed by the X Terms of Service, Privacy Policy, Developer Agreement, and Developer Policy.
 
 ### Finding Preview
 Below are the figures used in the paper.
